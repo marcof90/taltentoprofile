@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    height: 100svh;
+    font-family: "Inter", sans-serif;
+}
+
+h1{
+    font-size: 3em;
+    color: #1b1b1b;
+}
+
+h2{
+    font-size: 1.8em;
+    color: #777;
+}
+
+p{
+    font-size: 1.3em;
+    color: #111;
+}
+
+/* Header section */
+
+#header{
+    display: flex;
+    height: 80px;
+    padding: 0 8em;
+    position: fixed;
+    box-shadow: 0 4px 8px 4px #eaeaea;
+    background-color: #fff;
+    width: calc( 100% - 16em );
+    z-index: 1;
+}
+
+.header-brand{
+    width: 20%;
+    height: auto;
+    padding-top: 1.55em;
+}
+
+.header-brand h3{
+    font-size: 1.4em;
+    margin: 0;
+    color: #07080f;
+}
+
+.header-menu{
+    width: 80%;
+    padding-top: 1.7em;
+    text-align: end;
+}
+
+.header-menu a{
+    color: #4a4a4a;
+    font-size: 1.2em;
+    text-decoration: none;
+}
+
+/* END header section */
+
+/* Hero section */
+
+#hero{
+    height: inherit;
+    display: flex;
+    padding-top: 12em;
+}
+
+.img-container{
+    min-width: 500px;
+    min-height: 500px;
+    max-width: 600px;
+    max-height: 600px;
+    padding-left: 12em;
+}
+
+.profile{
+    width: 80%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    clip-path: circle(48%);
+    transition: 0.3s;
+}
+
+.profile:hover{
+    clip-path: circle(50%);
+}
+
+/* End Hero section */
+
+.info{
+    padding-top: 5em;
+    max-width: 650px;
+}
+
+
+#about{
+    height: 50svh;
+    padding: 4em 2em;
+    background-color: #eaeaea;
+}
+
+#about h2{
+    color: #07080f;
+}
+
+.skills{
+    display: flex;
+}
+
+.skills img{
+    width: auto;
+    height: 100px;
+    filter: brightness(0);
+    margin: 8px;
+    transition: .3s;
+}
+
+.skills img:hover{
+    filter: brightness(1);
+}
+
+
+/* responsive */
+@media screen and (max-width: 650px) and (orientation: portrait){
+    #header{
+        padding: 0 4em;
+        width: calc( 100% - 8em );
+    }
+    .header-brand{
+        width: 40%;
+    }
+    .header-menu{
+        width: 60%;
+    }
+    #hero{
+        flex-direction: column;
+        padding-top: 7em;
+    }
+    .img-container{
+        min-height: unset;
+        min-width: unset;
+        width: 100%;
+        padding: 0;
+    }
+    .profile{
+        margin: 0 10%;
+    }
+    .info{
+        padding-top: 0;
+        padding-left: 2em;
+    }
+}
